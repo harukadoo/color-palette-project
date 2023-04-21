@@ -70,6 +70,8 @@ document.addEventListener('click', (e) => {
             });
         });
 
+       columnCount = 0;
+
     } else if (type === 'add-color') {
         addNewColumn()
     }
