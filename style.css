@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-columns {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 18vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.column p {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 26px;
+    color: #fff;
+}
+
+.navigation button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .2s ease-out;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    width: min-content;
+    outline: none;
+    color: #fff;
+}
+
+.navigation button:hover {
+    background-color: rgba(255, 255, 255, 0.153);
+    transition: .2s ease-out;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 25px;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
+    padding-bottom: 21vh;
+    padding-left: 45%;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+.column:hover .navigation {
+    display: flex;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lock {
+    font-size: 25px;
+}
+
+.remove {
+    font-size: 30px;
+}
+
+.navigation button[data-type]:hover:after {
+    content: attr(data-type);
+    position: absolute;
+    background-color: #ffffff7d;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: .5s ease-out;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+    z-index: 2;
+}
+
+/* .new-color{
+    height: 100vh;
+}
+
+.add-color{
+    font-size: 36px;
+    position: absolute;
+    z-index: 100;
+    margin-left: -1.7%;
+    margin-top: 24%;
+    padding: 4px 15px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+} */
+
+.menu-container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;    
+}
+
+.menu{
+    width: 13%;
+    height: 80px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #ffffff64;
+    z-index: 2;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: -15px;
+}
+
+.add-new-color{
+    background: none;
+    border: 3px solid #000;
+    outline: none;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: .2s ease-out;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+}
+
+
+.menu button[data-type]:hover:after {
+    content: attr(data-type);
+    position: absolute;
+    background-color: #ffffffa0;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: .5s ease-out;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 90px;
+    z-index: 2;
+}
