@@ -7,4 +7,4 @@
 #### – in my palette you'll never find colors that don't match :)
 ### ***try it now → https://harukadoo.github.io/color-palette-project/***
 
-![project image](/img/color-palette-3.png)
+![project image](/img/color-palette-2.png)
