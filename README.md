@@ -1,1 +1,1 @@
-# color-palette-project
+# Color Palette Generator
