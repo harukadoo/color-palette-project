@@ -6,3 +6,5 @@
 #### – if you 'lock' the color — color won't change
 #### – in my palette you'll never find colors that don't match :)
 ### ***try it now → https://harukadoo.github.io/color-palette-project/***
+
+![project image](/img/color-palette.png)
