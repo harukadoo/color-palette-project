@@ -2,6 +2,7 @@ const columns = document.querySelectorAll('.column');
 const text = document.querySelectorAll('.text');
 
 let columnCount = 0;
+
 function addNewColumn() {
     if (columnCount >= 2) {
         return;
@@ -15,8 +16,8 @@ function addNewColumn() {
 
     const textCode = newColumn.querySelector('p');
     const lockBtn = newColumn.querySelector('.lock');
-        const copyBtn = newColumn.querySelector('.copy');
-        const removeBtn = newColumn.querySelector('.remove');
+    const copyBtn = newColumn.querySelector('.copy');
+    const removeBtn = newColumn.querySelector('.remove');
 
     textCode.textContent = newColor.hex();
     setTextColor(textCode, newColor.hex());
@@ -56,10 +57,10 @@ document.addEventListener('click', (e) => {
         copy(textToCopy);
 
         datasetCopy.dataset.type = 'copied!';
-        setTimeout(() => { 
+        setTimeout(() => {
             datasetCopy.dataset.type = 'copy';
         }, 2000);
-        
+
 
     } else if (type === 'remove') {
         const removeButtons = document.querySelectorAll('.remove');
@@ -70,7 +71,7 @@ document.addEventListener('click', (e) => {
             });
         });
 
-       columnCount = 0;
+        columnCount = 0;
 
     } else if (type === 'add-color') {
         addNewColumn()
@@ -88,7 +89,7 @@ function copy(text) {
 function setRandomColor(isInitial) {
     const colors = isInitial ? getColorsFromHash() : []
 
-    const baseColor = chroma.random(); 
+    const baseColor = chroma.random();
     const baseColor2 = chroma.random();
 
     columns.forEach((column, index) => {
@@ -103,7 +104,7 @@ function setRandomColor(isInitial) {
             return
         }
 
-        const color = index === 0 
+        const color = index === 0
             ? baseColor
             : chroma.scale([baseColor, baseColor2, baseColor2.darken(2)]).mode('lab')(index / (columns.length - 1))
 
@@ -111,7 +112,7 @@ function setRandomColor(isInitial) {
             colors.push(color.hex())
         }
 
-        textCode.textContent = color.hex(); 
+        textCode.textContent = color.hex();
         column.style.background = color.hex();
 
         setTextColor(textCode, color.hex());
@@ -146,3 +147,5 @@ function getColorsFromHash() {
 }
 
 setRandomColor(true)
+
+
